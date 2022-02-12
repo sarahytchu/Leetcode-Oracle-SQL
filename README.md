@@ -1,7 +1,7 @@
 # Leetcode Oracle SQL
 
 1. [Combine Two Tables](https://leetcode.com/problems/combine-two-tables/)
-Left Join
+/n Left Join
 ```
 SELECT p.firstName, p.lastName, a.city, a.state
 FROM Person p
