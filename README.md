@@ -20,4 +20,19 @@ FROM Employee M
 WHERE M.id=E.managerId);
 ```
 
-3. 
+3. [Duplicate Emails](https://leetcode.com/problems/duplicate-emails/)
+```
+SELECT email AS Email
+FROM Person
+GROUP BY email
+HAVING COUNT(email)>1;
+```
+
+4. [Customers Who Never Order](https://leetcode.com/problems/customers-who-never-order/)
+```
+SELECT name AS Customers
+FROM Customers
+WHERE id NOT IN (
+SELECT customerId
+FROM Orders);
+```
