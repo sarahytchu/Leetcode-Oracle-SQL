@@ -36,3 +36,4 @@ WHERE id NOT IN (
 SELECT customerId
 FROM Orders);
 ```
+5. [Deleter Duplicate Emails](https://leetcode.com/problems/delete-duplicate-emails/)
