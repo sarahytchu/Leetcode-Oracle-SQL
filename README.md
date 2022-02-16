@@ -44,3 +44,9 @@ INNER JOIN Person p2
 WHERE p1.id > p2.id AND p1.email = p2.email;
 ```
 
+6. [Rising Temperature](https://leetcode.com/problems/rising-temperature/)
+```
+SELECT w2.id
+FROM Weather w1, Weather w2
+WHERE w1.id = w2.id - 1 AND w2.temperature > w1.temperature;
+```
