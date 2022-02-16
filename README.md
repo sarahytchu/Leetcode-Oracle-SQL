@@ -43,6 +43,8 @@ DELETE p1 from Person p1
 INNER JOIN Person p2
 WHERE p1.id > p2.id AND p1.email = p2.email;
 ```
+<br>
+*Note:* In MySQL because no option for Oracle
 
 6. [Rising Temperature](https://leetcode.com/problems/rising-temperature/)
 ```
@@ -58,4 +60,13 @@ SELECT MAX(salary) as SecondHighestSalary
 FROM Employee
 WHERE salary NOT IN (SELECT MAX(salary) FROM Employee);
 ```
+
+8. [Employee Bonus](https://leetcode.com/problems/employee-bonus/)
+```SELECT e.name, b.bonus
+FROM Employee e
+FULL OUTER JOIN Bonus b ON e.empId = b.empId
+WHERE b.bonus < 1000 OR b.bonus IS NULL;
+```
+
+9. 
 
