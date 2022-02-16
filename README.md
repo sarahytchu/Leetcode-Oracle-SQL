@@ -68,5 +68,18 @@ FULL OUTER JOIN Bonus b ON e.empId = b.empId
 WHERE b.bonus < 1000 OR b.bonus IS NULL;
 ```
 
-9. 
+9. [Find Customer Referee](https://leetcode.com/problems/find-customer-referee/)
+```
+SELECT name
+FROM Customer 
+WHERE referee_id <> 2 OR referee_id IS NULL;
+```
 
+10. [Customer Placing the Largest Number of Orders](https://leetcode.com/problems/customer-placing-the-largest-number-of-orders/)
+```
+SELECT customer_number
+FROM Orders
+GROUP BY customer_number
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+```
