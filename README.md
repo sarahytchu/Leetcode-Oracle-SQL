@@ -52,5 +52,10 @@ a.recordDate = b.recordDate-1
 WHERE b.temperature > a.temperature;
 ```
 
-7.
+7. [Second Highest Salary](https://leetcode.com/problems/second-highest-salary/)
+```
+SELECT MAX(salary) as SecondHighestSalary
+FROM Employee
+WHERE salary NOT IN (SELECT MAX(salary) FROM Employee);
+```
 
