@@ -46,7 +46,11 @@ WHERE p1.id > p2.id AND p1.email = p2.email;
 
 6. [Rising Temperature](https://leetcode.com/problems/rising-temperature/)
 ```
-SELECT w2.id
-FROM Weather w1, Weather w2
-WHERE w1.id = w2.id - 1 AND w2.temperature > w1.temperature;
+SELECT b.id
+FROM Weather a JOIN Weather b ON
+a.recordDate = b.recordDate-1
+WHERE b.temperature > a.temperature;
 ```
+
+7.
+
