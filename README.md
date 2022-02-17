@@ -90,3 +90,23 @@ SELECT name, population, area
 FROM World
 WHERE area >= 3000000 OR population >= 25000000;
 ```
+
+12. [Classes More Than 5 Students](https://leetcode.com/problems/classes-more-than-5-students/)
+```
+SELECT class
+FROM Courses
+GROUP BY class
+HAVING COUNT(*) >= 5;
+```
+
+13.[Friend Requests I: Overall Acceptance Rate](https://leetcode.com/problems/friend-requests-i-overall-acceptance-rate/)
+```
+SELECT
+ROUND (
+IFNULL(
+(SELECT COUNT(DISTINCT requester_id, accepter_id) FROM RequestAccepted)
+/
+(SELECT COUNT(DISTINCT sender_id, send_to_id) FROM FriendRequest),
+0)
+, 2) AS accept_rate;
+```
