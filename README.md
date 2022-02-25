@@ -131,3 +131,13 @@ FROM Employee
 GROUP BY managerId
 HAVING COUNT(*) >= 5);
 ```
+
+16. [Department Highest Salary](https://leetcode.com/problems/department-highest-salary/)
+```
+SELECT d.name AS Department, e.name AS Employee, e.salary AS Salary
+FROM Employee e
+JOIN Department d
+ON e.departmentId = d.id
+WHERE (e.departmentId, Salary) IN
+(SELECT departmentId, MAX(Salary) FROM Employee GROUP BY departmentId)
+```
