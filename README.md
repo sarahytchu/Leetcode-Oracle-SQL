@@ -110,3 +110,13 @@ IFNULL(
 0)
 , 2) AS accept_rate;
 ```
+
+14.[Customers Who Bought All Products](https://leetcode.com/problems/customers-who-bought-all-products/)
+```
+SELECT customer_id
+FROM Customer 
+GROUP BY customer_id
+HAVING COUNT(DISTINCT product_key) = (
+SELECT COUNT(DISTINCT product_key)
+FROM Product );
+```
